@@ -1,8 +1,12 @@
-from django.contrib import admin
+
+# taskly/urls.py
 from django.urls import path,include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path("tasks/", include("tasks.urls"))
 ]
+
+
+
+
 
