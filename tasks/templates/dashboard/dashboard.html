@@ -19,7 +19,10 @@
     </style>
   </head>
   <body class="bg-gray-50 p-6">
-    <div class="max-w-[1400px] mx-auto">
+   {% comment %} <body class="p-6 bg-cover bg-center bg-no-repeat" 
+      style="background-image: url('{% static "images/bg.jpg" %}');">
+  {% endcomment %}
+  <div class="max-w-[1400px] mx-auto">
       <!-- Header  -->
       <header class="flex justify-between items-center mb-8">
         <h1 class="text-2xl font-semibold">Dashboard</h1>
@@ -53,7 +56,8 @@
         <div class="grid grid-cols-4 gap-6 mb-8">
           <!-- Total Task  -->
           <div class="bg-white rounded-xl p-6 shadow-sm">
-            <h3 class="text-sm font-medium text-gray-500 mb-4">TOTAL TASK</h3>
+           {% comment %} <div class="bg-white rounded-xl p-6 shadow-sm hover:bg-blue-300 transition-colors duration-300"> {% endcomment %}
+          <h3 class="text-sm font-medium text-gray-500 mb-4">TOTAL TASK</h3>
             <div class="flex justify-between items-start">
               <div>
                 <p class="text-3xl font-semibold mb-1">3</p>
@@ -79,7 +83,8 @@
           </div>
           <!-- Completed Task  -->
           <div class="bg-white rounded-xl p-6 shadow-sm">
-            <h3 class="text-sm font-medium text-gray-500 mb-4">
+           {% comment %} <div class="bg-white rounded-xl p-6 shadow-sm hover:bg-green-100 transition-colors duration-300"> {% endcomment %}
+          <h3 class="text-sm font-medium text-gray-500 mb-4">
               COMPLETED TASK
             </h3>
             <div class="flex justify-between items-start">
@@ -107,7 +112,8 @@
           </div>
           <!-- Task In Progress  -->
           <div class="bg-white rounded-xl p-6 shadow-sm">
-            <h3 class="text-sm font-medium text-gray-500 mb-4">
+          {% comment %} <div class="bg-white rounded-xl p-6 shadow-sm hover:bg-yellow-100 transition-colors duration-300"> {% endcomment %}
+          <h3 class="text-sm font-medium text-gray-500 mb-4">
               TASK IN PROGRESS
             </h3>
             <div class="flex justify-between items-start">
@@ -133,8 +139,9 @@
               </div>
             </div>
           </div>
-          <div class="bg-white rounded-xl p-6 shadow-sm">
-            <h3 class="text-sm font-medium text-gray-500 mb-4">TODOS</h3>
+          {% comment %} <div class="bg-white rounded-xl p-6 shadow-sm"> {% endcomment %}
+          <div class="bg-white rounded-xl p-6 shadow-sm hover:bg-purple-100 transition-colors duration-300">
+          <h3 class="text-sm font-medium text-gray-500 mb-4">TODOS</h3>
             <div class="flex justify-between items-start">
               <div>
                 <p class="text-3xl font-semibold mb-1">1</p>
@@ -164,6 +171,50 @@
         {% endblock tasks %}
         
       </main>
+      
     </div>
   </body>
 </html>
+
+
+
+
+{% comment %} 
+ <body class="bg-gray-50 p-6">
+
+ {% endcomment %}
+
+  {% comment %} 
+    
+  <body class="p-6 bg-cover bg-center bg-no-repeat" 
+      style="background-image: url('{% static "images/bg.jpg" %}');">
+
+  {% endcomment %}
+
+  {% comment %} ******* hover {% endcomment %}
+{% comment %}  
+   <div class="bg-white rounded-xl p-6 shadow-sm hover:bg-blue-100 transition-colors duration-300">
+  <!-- card contect -->
+</div>
+ {% endcomment %}
+
+
+
+ {% comment %} 
+  <div class="bg-white rounded-xl p-6 shadow-sm hover:bg-blue-50 transition-colors duration-300">
+  <!-- Total Task -->
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm hover:bg-green-50 transition-colors duration-300">
+  <!-- Completed Task -->
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm hover:bg-yellow-50 transition-colors duration-300">
+  <!-- Task In Progress -->
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm hover:bg-purple-50 transition-colors duration-300">
+  <!-- Todos -->
+</div>
+
+ {% endcomment %}
